@@ -231,7 +231,7 @@
         venueMap.classList.remove('map-ready');
       };
 
-      window.initWeddingVenueMap = () => {
+      const initWeddingVenueMap = () => {
         const maps = window.naver?.maps;
         if (!maps || mapAuthenticationFailed) return;
 
@@ -251,7 +251,8 @@
 
       const sdk = document.createElement('script');
       sdk.async = true;
-      sdk.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=4bgbls0air&callback=initWeddingVenueMap';
+      sdk.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=4bgbls0air';
+      sdk.addEventListener('load', initWeddingVenueMap, { once: true });
       document.head.append(sdk);
     }
   </script>
