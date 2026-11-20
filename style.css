@@ -226,6 +226,11 @@ h2 { margin: 0 0 1.45rem; font-size: 1.625rem; line-height: 1.35; }
   visibility: hidden;
 }
 
+.map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
 .map-ready .map-fallback { visibility: hidden; }
 .map-ready .map-live { visibility: visible; }
 
